@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{CB4AF870-D9D3-418E-990B-3C3359F8C0CD}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <LangVersion>8.0</LangVersion>
+    <AssemblyName>hydra</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <HintPath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Speech">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Speech\v4.0_4.0.0.0__31bf3856ad364e35\System.Speech.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Windows.Forms\v4.0_4.0.0.0__b77a5c561934e089\System.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.IO.Compression.FileSystem\v4.0_4.0.0.0__b77a5c561934e089\System.IO.Compression.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\Microsoft.VisualBasic\v4.0_10.0.0.0__b03f5f7f11d50a3a\Microsoft.VisualBasic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Drawing\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Drawing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.IO.Compression\v4.0_4.0.0.0__b77a5c561934e089\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Security\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core">
+      <HintPath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Management.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>C:\Windows\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Xml.Linq\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="-a161e60f-e57c-4aa0-b187-3c2469f18077-BuildConfiguration.cs" />
+    <Compile Include="-Module--9346C7A6-7E11-4F09-814E-0228779816B2-.cs" />
+    <Compile Include="-\-.cs" />
+    <Compile Include="GDBD.Bridges\AdvisorClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\BreakpointType.cs" />
+    <Compile Include="GDBD.Bridges\BridgeIssuer.cs" />
+    <Compile Include="GDBD.Bridges\ContextClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\DefinitionClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\FactoryIssuer.cs" />
+    <Compile Include="GDBD.Bridges\GetterClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\IdentifierClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\InfoClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\ParamClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\RulesClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\SetterClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\SystemClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\TransitionPatternValues.cs" />
+    <Compile Include="GDBD.Bridges\ValClientBridge.cs" />
+    <Compile Include="GDBD.Bridges\WorkerClientBridge.cs" />
+    <Compile Include="GDBD.Dispatcher\ApplicationPartitionType.cs" />
+    <Compile Include="GDBD.Dispatcher\CacheActions.cs" />
+    <Compile Include="GDBD.Dispatcher\ComparatorBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\ConnectionBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\ConsumerBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\FactoryInstance.cs" />
+    <Compile Include="GDBD.Dispatcher\FilterClassDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\InitializerBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\InstanceClassDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\ListClassDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\ObjectBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\ObjectList.cs" />
+    <Compile Include="GDBD.Dispatcher\PolicyReader.cs" />
+    <Compile Include="GDBD.Dispatcher\ProcBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\RecordClassDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\RefBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\SchemaBroadcasterDispatcher.cs" />
+    <Compile Include="GDBD.Dispatcher\SetterComposer.cs" />
+    <Compile Include="GDBD.Dispatcher\tagExtentMode.cs" />
+    <Compile Include="GDBD.Filter\AttrBroadcasterFilter.cs" />
+    <Compile Include="GDBD.Filter\Directories.cs" />
+    <Compile Include="GDBD.Filter\PolicyBroadcasterFilter.cs" />
+    <Compile Include="GDBD.Filter\ProxyBroadcasterFilter.cs" />
+    <Compile Include="GDBD.Filter\QueueBroadcasterFilter.cs" />
+    <Compile Include="GDBD.Filter\RefList.cs" />
+    <Compile Include="GDBD.Filter\RegistryBroadcasterFilter.cs" />
+    <Compile Include="GDBD.Filter\ServiceBroadcasterFilter.cs" />
+    <Compile Include="GDBD.Filter\WrapSideValues.cs" />
+    <Compile Include="GDBD.Importers\ConfigIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\ConfigurationIssuer.cs" />
+    <Compile Include="GDBD.Importers\FacadeIssuer.cs" />
+    <Compile Include="GDBD.Importers\GlobalIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\IndexerTest.cs" />
+    <Compile Include="GDBD.Importers\InitializerIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\ObjectIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\ParamsIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\ParserList.cs" />
+    <Compile Include="GDBD.Importers\PropertyTest.cs" />
+    <Compile Include="GDBD.Importers\QueueError.cs" />
+    <Compile Include="GDBD.Importers\Record.cs" />
+    <Compile Include="GDBD.Importers\RefFilter.cs" />
+    <Compile Include="GDBD.Importers\SchemaComposer.cs" />
+    <Compile Include="GDBD.Importers\SchemaDic.cs" />
+    <Compile Include="GDBD.Importers\SchemaFilter.cs" />
+    <Compile Include="GDBD.Importers\SchemaIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\TemplateIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\VisitorIssuerImporter.cs" />
+    <Compile Include="GDBD.Importers\WrapperIssuerImporter.cs" />
+    <Compile Include="GDBD.Items\AttributeTestItem.cs" />
+    <Compile Include="GDBD.Items\CallbackTestItem.cs" />
+    <Compile Include="GDBD.Items\ComparatorEvent.cs" />
+    <Compile Include="GDBD.Items\ContextError.cs" />
+    <Compile Include="GDBD.Items\CreatorTestItem.cs" />
+    <Compile Include="GDBD.Items\DatabaseTestItem.cs" />
+    <Compile Include="GDBD.Items\DecoratorList.cs" />
+    <Compile Include="GDBD.Items\FactoryTestItem.cs" />
+    <Compile Include="GDBD.Items\GestureRecognizerState.cs" />
+    <Compile Include="GDBD.Items\ListenerTestItem.cs" />
+    <Compile Include="GDBD.Items\ManagerIssuer.cs" />
+    <Compile Include="GDBD.Items\MerchantTestItem.cs" />
+    <Compile Include="GDBD.Items\RegistryList.cs" />
+    <Compile Include="GDBD.Items\RoleTestItem.cs" />
+    <Compile Include="GDBD.Items\RuleTestItem.cs" />
+    <Compile Include="GDBD.Items\SerializerTestItem.cs" />
+    <Compile Include="GDBD.Items\SpecificationTestItem.cs" />
+    <Compile Include="GDBD.Items\TagTestItem.cs" />
+    <Compile Include="GDBD.Items\ValidationType.cs" />
+    <Compile Include="GDBD.Items\WriterTestItem.cs" />
+    <Compile Include="GDBD.Mappers\AuthenticationError.cs" />
+    <Compile Include="GDBD.Mappers\BridgeReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\Context.cs" />
+    <Compile Include="GDBD.Mappers\CreatorReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\DecoratorReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\FieldReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\ImporterReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\IndexerReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\InteractiveOperation.cs" />
+    <Compile Include="GDBD.Mappers\ItemReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\MappingDataType.cs" />
+    <Compile Include="GDBD.Mappers\RoleReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\RuleReaderMapper.cs" />
+    <Compile Include="GDBD.Mappers\TemplateNodeSelectionState.cs" />
+    <Compile Include="GDBD.Mappers\WriterReaderMapper.cs" />
+    <Compile Include="GDBD.Maps\BreakBinarySubtractionValues.cs" />
+    <Compile Include="GDBD.Maps\CandidateIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\CodeIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\ConnectionList.cs" />
+    <Compile Include="GDBD.Maps\ControlTraceCodes.cs" />
+    <Compile Include="GDBD.Maps\DescriptorIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\FieldIssuer.cs" />
+    <Compile Include="GDBD.Maps\LogonType.cs" />
+    <Compile Include="GDBD.Maps\MappingIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\MockIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\ObserverIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\OrderIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\PrinterIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\ProducerIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\StructIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\StubIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\TaskIteratorMapping.cs" />
+    <Compile Include="GDBD.Maps\TokenizerIteratorMapping.cs" />
+    <Compile Include="GDBD.Mocks\ConfigProperty.cs" />
+    <Compile Include="GDBD.Mocks\InfoComposer.cs" />
+    <Compile Include="GDBD.Mocks\IteratorIssuerMock.cs" />
+    <Compile Include="GDBD.Mocks\MapperIssuerMock.cs" />
+    <Compile Include="GDBD.Mocks\MethodIssuerMock.cs" />
+    <Compile Include="GDBD.Mocks\PolicyIssuerMock.cs" />
+    <Compile Include="GDBD.Mocks\PredicateIssuerMock.cs" />
+    <Compile Include="GDBD.Mocks\Publisher.cs" />
+    <Compile Include="GDBD.Mocks\ServiceIssuerMock.cs" />
+    <Compile Include="GDBD.Mocks\StrategyIssuer.cs" />
+    <Compile Include="GDBD.Mocks\SystemDic.cs" />
+    <Compile Include="GDBD.Mocks\TestsIssuerMock.cs" />
+    <Compile Include="GDBD.Properties\Settings.cs" />
+    <Compile Include="GDBD.Specifications\AccountClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\AdapterClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\BaseClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\BroadcasterError.cs" />
+    <Compile Include="GDBD.Specifications\Collection.cs" />
+    <Compile Include="GDBD.Specifications\DecoratorClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\FieldClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\GetterTest.cs" />
+    <Compile Include="GDBD.Specifications\GraphGroupStyle.cs" />
+    <Compile Include="GDBD.Specifications\ImporterClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\IndexerClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\ItemClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\ObserverEvent.cs" />
+    <Compile Include="GDBD.Specifications\ProccesorClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\ProcessClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\PrototypeError.cs" />
+    <Compile Include="GDBD.Specifications\RegClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\ReponseClassSpec.cs" />
+    <Compile Include="GDBD.Specifications\TimeState.cs" />
+    <Compile Include="GDBD.Specifications\TokenClassSpec.cs" />
+    <Compile Include="GDBD.Strategies\AdvisorRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\CollectionComposer.cs" />
+    <Compile Include="GDBD.Strategies\ContainerIssuer.cs" />
+    <Compile Include="GDBD.Strategies\ContextRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\DockPreference.cs" />
+    <Compile Include="GDBD.Strategies\InfoRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\ParameterRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\ParamRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\ParserEvent.cs" />
+    <Compile Include="GDBD.Strategies\PrototypeRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\PublisherRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\StrategyRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\UtilsRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\ValueRequestStrategy.cs" />
+    <Compile Include="GDBD.Strategies\WorkerRequestStrategy.cs" />
+    <Compile Include="GDBD.Structs\BridgeTest.cs" />
+    <Compile Include="GDBD.Structs\ChildType.cs" />
+    <Compile Include="GDBD.Structs\ClassEvent.cs" />
+    <Compile Include="GDBD.Structs\DefinitionPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\DiffGramOperationType.cs" />
+    <Compile Include="GDBD.Structs\FacadePropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\IdentifierPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\InvocationPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\ManagerComposer.cs" />
+    <Compile Include="GDBD.Structs\ManagerPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\PageList.cs" />
+    <Compile Include="GDBD.Structs\PoolPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\ProcessComposer.cs" />
+    <Compile Include="GDBD.Structs\PrototypeInstance.cs" />
+    <Compile Include="GDBD.Structs\ReceiveSecurityHeaderBindingModes.cs" />
+    <Compile Include="GDBD.Structs\RepositoryPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\ResolverDic.cs" />
+    <Compile Include="GDBD.Structs\ResourceDictionaryLocation.cs" />
+    <Compile Include="GDBD.Structs\ServerPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\SetterPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\StatePropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\StatusList.cs" />
+    <Compile Include="GDBD.Structs\SystemPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\ValPropertyStruct.cs" />
+    <Compile Include="GDBD.Structs\VisibleSearch.cs" />
+    <Compile Include="GDBD.Structs\WorkerPropertyStruct.cs" />
+    <Compile Include="GDBD.Workers\AlgoComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\ChildRunStatus.cs" />
+    <Compile Include="GDBD.Workers\ConfigComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\ConnectionComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\DefinitionDic.cs" />
+    <Compile Include="GDBD.Workers\ExporterComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\ExpressionComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\GlobalComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\InitializerComposer.cs" />
+    <Compile Include="GDBD.Workers\InitializerComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\InterceptorComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\InternalArrayTypeE.cs" />
+    <Compile Include="GDBD.Workers\ParamsComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\RefEvent.cs" />
+    <Compile Include="GDBD.Workers\SingletonReader.cs" />
+    <Compile Include="GDBD.Workers\TemplateComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\VisitorComposerWorker.cs" />
+    <Compile Include="GDBD.Workers\WrapperComposerWorker.cs" />
+    <Compile Include="Newtonsoft.Annotations\BridgeInstance.cs" />
+    <Compile Include="Newtonsoft.Annotations\CodeListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\CollectionListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\CollectionProperty.cs" />
+    <Compile Include="Newtonsoft.Annotations\CreatorDic.cs" />
+    <Compile Include="Newtonsoft.Annotations\CustomerListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\DescriptorListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\MappingListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\MessageTest.cs" />
+    <Compile Include="Newtonsoft.Annotations\MockListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\ModelTest.cs" />
+    <Compile Include="Newtonsoft.Annotations\ObserverListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\ParameterDic.cs" />
+    <Compile Include="Newtonsoft.Annotations\PlatformType.cs" />
+    <Compile Include="Newtonsoft.Annotations\PrinterListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\RepositoryListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\RoleEvent.cs" />
+    <Compile Include="Newtonsoft.Annotations\ScannerAttributeKind.cs" />
+    <Compile Include="Newtonsoft.Annotations\ServerListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\SparklineAxisMinMaxValues.cs" />
+    <Compile Include="Newtonsoft.Annotations\StrategyError.cs" />
+    <Compile Include="Newtonsoft.Annotations\StructListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\StubListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\TaskListAnnotation.cs" />
+    <Compile Include="Newtonsoft.Annotations\TextPaddingOptions.cs" />
+    <Compile Include="Newtonsoft.Annotations\TYMED.cs" />
+    <Compile Include="Newtonsoft.Annotations\ValDic.cs" />
+    <Compile Include="Newtonsoft.Candidates\AttributeDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\BridgeDic.cs" />
+    <Compile Include="Newtonsoft.Candidates\ColorMatrixFlag.cs" />
+    <Compile Include="Newtonsoft.Candidates\ConsumerEvent.cs" />
+    <Compile Include="Newtonsoft.Candidates\DatabaseDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\DicIssuer.cs" />
+    <Compile Include="Newtonsoft.Candidates\ExceptionDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\HelperDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\InvocationDic.cs" />
+    <Compile Include="Newtonsoft.Candidates\MapperList.cs" />
+    <Compile Include="Newtonsoft.Candidates\PageDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\ParameterDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\ParserDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\PrototypeDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\PsMaxLengths.cs" />
+    <Compile Include="Newtonsoft.Candidates\SerializerDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\StatusDicCandidate.cs" />
+    <Compile Include="Newtonsoft.Candidates\WatcherComposer.cs" />
+    <Compile Include="Newtonsoft.Common\AnnotationComposer.cs" />
+    <Compile Include="Newtonsoft.Common\CompositingMode.cs" />
+    <Compile Include="Newtonsoft.Common\CrashDumpGrbit.cs" />
+    <Compile Include="Newtonsoft.Common\CreatorIssuer.cs" />
+    <Compile Include="Newtonsoft.Common\ExceptionEvent.cs" />
+    <Compile Include="Newtonsoft.Common\ImporterTest.cs" />
+    <Compile Include="Newtonsoft.Common\IndexerInstance.cs" />
+    <Compile Include="Newtonsoft.Common\InitializerTest.cs" />
+    <Compile Include="Newtonsoft.Common\MapperEvent.cs" />
+    <Compile Include="Newtonsoft.Common\MathOperator.cs" />
+    <Compile Include="Newtonsoft.Common\ParamTest.cs" />
+    <Compile Include="Newtonsoft.Common\PoolIssuer.cs" />
+    <Compile Include="Newtonsoft.Common\QueueList.cs" />
+    <Compile Include="Newtonsoft.Common\RepositoryEvent.cs" />
+    <Compile Include="Newtonsoft.Common\RoleDic.cs" />
+    <Compile Include="Newtonsoft.Common\RoleFilter.cs" />
+    <Compile Include="Newtonsoft.Common\SchemaEvent.cs" />
+    <Compile Include="Newtonsoft.Common\ServerComposer.cs" />
+    <Compile Include="Newtonsoft.Common\SettingsSerializeAs.cs" />
+    <Compile Include="Newtonsoft.Common\TargetEntryState.cs" />
+    <Compile Include="Newtonsoft.Common\TemplateInstance.cs" />
+    <Compile Include="Newtonsoft.Common\XlOLEVerb.cs" />
+    <Compile Include="Newtonsoft.Consumers\BroadcasterFilter.cs" />
+    <Compile Include="Newtonsoft.Consumers\ComparatorConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\ComparatorProperty.cs" />
+    <Compile Include="Newtonsoft.Consumers\DicEventConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\ErrorEventConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\EventEventConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\InstanceEventConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\ListEventConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\MerchantIssuer.cs" />
+    <Compile Include="Newtonsoft.Consumers\ProcConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\ProcTest.cs" />
+    <Compile Include="Newtonsoft.Consumers\RecordEventConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\RepositoryList.cs" />
+    <Compile Include="Newtonsoft.Consumers\RollbackTransactionGrbit.cs" />
+    <Compile Include="Newtonsoft.Consumers\ThreadConsumer.cs" />
+    <Compile Include="Newtonsoft.Consumers\TokenizerError.cs" />
+    <Compile Include="Newtonsoft.Consumers\TriValueBoolean.cs" />
+    <Compile Include="Newtonsoft.Consumers\VARIANTFLAGS.cs" />
+    <Compile Include="Newtonsoft.Consumers\VBRuntimeKind.cs" />
+    <Compile Include="Newtonsoft.Database\AccountEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\AccountFilter.cs" />
+    <Compile Include="Newtonsoft.Database\BaseEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\DecoratorEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\Definition.cs" />
+    <Compile Include="Newtonsoft.Database\DispatcherEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\FactoryFilter.cs" />
+    <Compile Include="Newtonsoft.Database\ItemEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\MapEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\MessageEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\PageEvent.cs" />
+    <Compile Include="Newtonsoft.Database\PipelinePublishProjectCfgTargets.cs" />
+    <Compile Include="Newtonsoft.Database\ProccesorEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\ProccesorIssuer.cs" />
+    <Compile Include="Newtonsoft.Database\ProcessEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\ProxyList.cs" />
+    <Compile Include="Newtonsoft.Database\RegEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\SingletonEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\StubTest.cs" />
+    <Compile Include="Newtonsoft.Database\SudsUse.cs" />
+    <Compile Include="Newtonsoft.Database\TokenEventEntry.cs" />
+    <Compile Include="Newtonsoft.Database\WatsonLoggingFlags.cs" />
+    <Compile Include="Newtonsoft.Expressions\AccountInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\AdapterInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\AlgoInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\ConnectionEvent.cs" />
+    <Compile Include="Newtonsoft.Expressions\DispatcherInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\InterceptorInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\MapInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\MessageInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\ModelInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\ObjectDic.cs" />
+    <Compile Include="Newtonsoft.Expressions\ProccesorInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\ProductInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\ResolverList.cs" />
+    <Compile Include="Newtonsoft.Expressions\SigningOption.cs" />
+    <Compile Include="Newtonsoft.Expressions\SingletonInstanceExpression.cs" />
+    <Compile Include="Newtonsoft.Expressions\TemplateIssuer.cs" />
+    <Compile Include="Newtonsoft.Expressions\TemplateList.cs" />
+    <Compile Include="Newtonsoft.Filters\CodeErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\ConnectActionCursor.cs" />
+    <Compile Include="Newtonsoft.Filters\CustomerErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\DefinitionErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\FacadeComposer.cs" />
+    <Compile Include="Newtonsoft.Filters\FacadeErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\FileFormatVersions.cs" />
+    <Compile Include="Newtonsoft.Filters\FindDirection.cs" />
+    <Compile Include="Newtonsoft.Filters\InterpreterErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\ManagerErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\PoolErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\ProcInstance.cs" />
+    <Compile Include="Newtonsoft.Filters\RepositoryErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\ResolverErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\ServerErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\SetterTest.cs" />
+    <Compile Include="Newtonsoft.Filters\StateErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\StubErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\tagURLTEMPLATE.cs" />
+    <Compile Include="Newtonsoft.Filters\ThreadComposer.cs" />
+    <Compile Include="Newtonsoft.Filters\ValErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\WatcherErrorFilter.cs" />
+    <Compile Include="Newtonsoft.Filters\WatcherIssuer.cs" />
+    <Compile Include="Newtonsoft.Pools\AuthenticationComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\AuthenticationReader.cs" />
+    <Compile Include="Newtonsoft.Pools\BaseIssuer.cs" />
+    <Compile Include="Newtonsoft.Pools\BroadcasterComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\ChecksumType.cs" />
+    <Compile Include="Newtonsoft.Pools\ClassComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\ClientComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\dateorder.cs" />
+    <Compile Include="Newtonsoft.Pools\Docking.cs" />
+    <Compile Include="Newtonsoft.Pools\FilterReader.cs" />
+    <Compile Include="Newtonsoft.Pools\IdentifierDic.cs" />
+    <Compile Include="Newtonsoft.Pools\IndexerIssuer.cs" />
+    <Compile Include="Newtonsoft.Pools\InvocationTest.cs" />
+    <Compile Include="Newtonsoft.Pools\IssuerComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\IteratorComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\IteratorError.cs" />
+    <Compile Include="Newtonsoft.Pools\MapperComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\MethodComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\ProgressReportingOption.cs" />
+    <Compile Include="Newtonsoft.Pools\PropertyComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\ReaderComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\RecordDic.cs" />
+    <Compile Include="Newtonsoft.Pools\RefDic.cs" />
+    <Compile Include="Newtonsoft.Pools\RequestComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\ServerList.cs" />
+    <Compile Include="Newtonsoft.Pools\SourceMode.cs" />
+    <Compile Include="Newtonsoft.Pools\TestComposerPool.cs" />
+    <Compile Include="Newtonsoft.Pools\TestsComposerPool.cs" />
+    <Compile Include="Newtonsoft.Resolver\AttributeStyle.cs" />
+    <Compile Include="Newtonsoft.Resolver\CallbackIssuer.cs" />
+    <Compile Include="Newtonsoft.Resolver\ContextFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\HelperFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\InfoFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\InstanceInstance.cs" />
+    <Compile Include="Newtonsoft.Resolver\PageFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\ParameterFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\ParamFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\ParserFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\ProducerProperty.cs" />
+    <Compile Include="Newtonsoft.Resolver\PrototypeFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\StatusFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\StrategyFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\ThreadEvent.cs" />
+    <Compile Include="Newtonsoft.Resolver\UtilsFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Resolver\ValueFilterResolver.cs" />
+    <Compile Include="Newtonsoft.Rules\ApplicationState.cs" />
+    <Compile Include="Newtonsoft.Rules\BroadcasterInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\ClientInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\ComposerInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\DicInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\ErrorInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\EventInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\FilterInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\IssuerInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\PropertyInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\ReaderInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\RegistryIssuer.cs" />
+    <Compile Include="Newtonsoft.Rules\StateFilter.cs" />
+    <Compile Include="Newtonsoft.Rules\TestInstanceRule.cs" />
+    <Compile Include="Newtonsoft.Rules\TokenIssuer.cs" />
+    <Compile Include="Newtonsoft.Rules\UnicodeCategory.cs" />
+    <Compile Include="Newtonsoft.Rules\ValueIssuer.cs" />
+    <Compile Include="Newtonsoft.Rules\VisitorComposer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="-f0ac8481-2a23-4c93-9d4b-c36e2fae6ec0-" />
+    <EmbeddedResource Include="aR3nbf8dQp2feLmk31.lSfgApatkdxsVcGcrktoFd.resx" />
+    <EmbeddedResource Include="Class.Global" />
+    <EmbeddedResource Include="ILRepack.List" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
